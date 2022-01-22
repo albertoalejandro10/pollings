@@ -1,0 +1,27 @@
+{
+  "name": "elections",
+  "version": "1.0.0",
+  "description": "development three form for a blockchain project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertoalejandro10/pollings.git"
+  },
+  "keywords": [
+    "votes",
+    "ballot",
+    "voting",
+    "vote"
+  ],
+  "author": "softsystems.com.ar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albertoalejandro10/pollings/issues"
+  },
+  "homepage": "https://github.com/albertoalejandro10/pollings#readme",
+  "dependencies": {
+  }
+}

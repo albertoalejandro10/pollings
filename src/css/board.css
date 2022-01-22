@@ -1,0 +1,52 @@
+/* Colors */
+:root {
+    --primary-color: #1682B0;
+    --secondary-color: #FF4215;
+    --third-color: #FFBD15;
+    --soft-blue: #e7f5ff;
+    --silver: #9DA2AB;
+    --black: #020202;
+    --just-white: #fff;
+}
+
+/* Estilos para las tablas */
+.form-table {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+caption {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+table {
+    width: 100%;
+    background-color: var(--just-white);
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    border-bottom: 1px solid;
+    color: var(--soft-blue);
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: var(--soft-blue);
+    color: var(--primary-color);
+}
