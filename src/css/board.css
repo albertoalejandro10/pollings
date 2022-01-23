@@ -1,11 +1,16 @@
+
 /* Colors */
 :root {
     --primary-color: #1682B0;
-    --secondary-color: #FF4215;
-    --third-color: #FFBD15;
+    --easy-blue: #5CAACB;
     --soft-blue: #e7f5ff;
-    --silver: #9DA2AB;
+    --secondary-color: #FF4215;
+    --soft-orange: #FF6743;
+    --third-color: #FFBD15;
+    --soft-yellow: #FFCA43;
+    --label-titles: #707070;
     --black: #020202;
+    --silver: #9DA2AB;
     --just-white: #fff;
 }
 
@@ -17,12 +22,27 @@
     align-items: center;
 }
 
+.form-table span i {
+    position: relative;
+    top: 1px;
+    left: 30px;
+}
+
+.form-table span i:hover {
+    color: var(--primary-color);
+}
+
 caption {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     padding: 10px;
     margin: 8px 0;
+}
+
+caption i {
+    color: var(--black);
+    cursor: pointer;
 }
 
 table {
@@ -33,7 +53,11 @@ table {
 }
 
 th, td {
-    padding: 20px;
+    padding: 10px 25px;
+}
+
+.form__table-candidates th, .form__table-candidates td {
+    padding: 10px 50px;
 }
 
 thead {
@@ -49,4 +73,9 @@ tr:nth-child(even) {
 tr:hover td{
     background-color: var(--soft-blue);
     color: var(--primary-color);
+}
+
+tr td i {
+    color: red;
+    cursor: pointer;
 }
