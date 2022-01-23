@@ -1,32 +1,40 @@
-// const form = document.getElementById('form');
-// const inputs = document.querySelectorAll('#form input, #form textarea');
-// const title = document.getElementById('title');
-// const description = document.getElementById('description');
+let m = 2;
+const addRowCensus = () => {
+    let tbody_2 = document.getElementById('tbody-census');
+    let row_2 = document.createElement('tr');
+    m++;
+    row_2.id = `row-${m}-census`;
+    
 
-// const regex = {
-// 	title: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo 
-// 	description: /^[a-zA-ZÀ-ÿ\s]{20,600}$/, // Letras y espacios, pueden llevar acentos.
-//     description_table: /^[a-zA-ZÀ-ÿ\s]{10,30}$/, // Letras y espacios, pueden llevar acentos.
-//     name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-// 	mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-// 	number: /^\d{7,14}$/ // 7 a 14 numeros.
-// }
+    let row_2_data_1 = document.createElement('td');
+    row_2_data_1.innerHTML = "25.265.058";
 
-// const fields = {
-// 	title: false,
-// 	description: false,
-//     description_table: false,
-//     name: false,
-// 	mail: false,
-//     number: false,
-// }
+    let row_2_data_2 = document.createElement('td');
+    row_2_data_2.innerHTML = "Alberto";
 
-// inputs.forEach( input => {
-//     input.addEventListener('keyup', () => {
-//         console.log('Tecla levantada');
-//     });
-// });
+    let row_2_data_3 = document.createElement('td');
+    row_2_data_3.innerHTML = "alberto@gmail.com";
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault
-// })
+    let row_2_data_4 = document.createElement('td');
+    row_2_data_4.innerHTML = "Wallet";
+    
+    let row_2_data_5 = document.createElement('td');
+    row_2_data_5.innerHTML = `<button type="button" onclick="deleteRowCensus(${m++})"><i class="fas fa-trash-alt"></i></button>`;
+
+    row_2.appendChild(row_2_data_1);
+    row_2.appendChild(row_2_data_2);
+    row_2.appendChild(row_2_data_3);
+    row_2.appendChild(row_2_data_4);
+    row_2.appendChild(row_2_data_5);
+    tbody_2.appendChild(row_2);
+}
+
+const deleteRowCensus = (index) => {
+    let table = document.getElementById("census");
+    let rowCount = table.rows.length;
+    
+    if(rowCount <= 2)
+        alert('No se puede eliminar más');
+    else
+        document.getElementById(`row-${index}-census`).remove();
+}

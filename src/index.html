@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,19 +42,21 @@
                     </div>
 
                     <div class="form-date">
-                        <label class="form-label">Horario de votación</label>
-
-                        <div class="group-date">
-                            <label></label>
+                        <label class="form-label">Duración de la votación</label>
+                        <div class="group-date-input">
+                            <div class="group-date">
+                                <label for="start-date">Fecha</label>
+                                <input class="form__group-input date" type="date" id="start-date" name="start-date" required>
+                            </div>
+                            <div class="group-time">
+                                <label for="start-time">Time</label>
+                                <input class="form__group-input date" type="time" id="start-time" name="start-time" required>
+                            </div>
+                            <div class="group-duration">
+                                <label for="time-duration">Duration</label>
+                                <input class="form__group-input date" type="time" id="time-duration" name="time-duration" required>
+                            </div>
                         </div>
-
-                        <!-- <p>Inicia desde </p>
-                        <input class="form__group-input date" type="date" id="start-date" name="polldate-start" required>
-                        <input class="form__group-input date" type="time" id="start-time" name="polltime-start" required>
-
-                        <p>hasta </p>
-                        <input class="form__group-input date" type="date" id="end-date" name="polldate-end" required>
-                        <input class="form__group-input date" type="time" id="end-time" name="polltime-end" required> -->
                     </div>
 
                     <div class="form-type">
@@ -72,8 +74,8 @@
 
                     <div class="form-table">
                         <div class="form__table-candidates">
-                            <table>
-                                <caption>Candidatos <span><i class="fas fa-plus-circle"></i></span></caption>
+                            <table id="candidates">
+                                <caption>Candidatos <button type="button" onclick="addRow()"><i class="fas fa-plus-circle"></i></button></caption>
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -82,29 +84,25 @@
                                         <th>&nbsp</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td>Jose R</td>
-                                    <td>Partido radical</td>
-                                    <td>jm.jpg</td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Raul</td>
-                                    <td>Partido Peronista</td>
-                                    <td>mf.jpg</td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>Roberto M</td>
-                                    <td>Partido Izquierdo</td>
-                                    <td>mi.jpg</td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
+                                <tbody id="tbody">
+                                    <tr id="row-0">
+                                        <td>Jose R</td>
+                                        <td>Partido radical</td>
+                                        <td>jm.jpg</td>
+                                        <td><button type="button" onclick="deleteRow(0)"><i class="fas fa-trash-alt"></i></button></td>
+                                    </tr>
+                                    <tr id="row-1">
+                                        <td>Raul</td>
+                                        <td>Partido Peronista</td>
+                                        <td>mf.jpg</td>
+                                        <td><button type="button" onclick="deleteRow(1)"><i class="fas fa-trash-alt"></i></button></td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div class="form__table-census">
-                            <table>
-                                <caption>Padrón <span><i class="fas fa-plus-circle"></i></span></caption>
+                            <table id="census">
+                                <caption>Padrón <button type="button" onclick="addRowCensus()"><i class="fas fa-plus-circle"></i></span></caption>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -114,20 +112,22 @@
                                         <th>&nbsp</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td>22.678.8..</td>
-                                    <td>Gonzalez Diego</td>
-                                    <td>dgonza@gmail.com</td>
-                                    <td>Wallet</td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>41.256.68</td>
-                                    <td>Juan Fernandes</td>
-                                    <td>juanfer@gmail.com</td>
-                                    <td>Wallet</td>
-                                    <td><i class="fas fa-trash-alt"></i></td>
-                                </tr>
+                                <tbody id="tbody-census">
+                                    <tr id="row-0-census">
+                                        <td>22.678.8.</td>
+                                        <td>Gonzalez Diego</td>
+                                        <td>dgonza@gmail.com</td>
+                                        <td>Wallet</td>
+                                        <td><button type="button" onclick="deleteRowCensus(0)"><i class="fas fa-trash-alt"></i></button></i></td>
+                                    </tr>
+                                    <tr id="row-1-census">
+                                        <td>41.256.68</td>
+                                        <td>Juan Fernandes</td>
+                                        <td>juanfer@gmail.com</td>
+                                        <td>Wallet</td>
+                                        <td><button type="button" onclick="deleteRowCensus(1)"><i class="fas fa-trash-alt"></i></button></td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>

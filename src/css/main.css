@@ -137,6 +137,7 @@ section {
     padding: 10px;
     letter-spacing: 1px;
     cursor: pointer;
+    margin-top: 6px;
 }
 
 .form-date .form-label,
@@ -212,6 +213,43 @@ section {
     margin: 0 auto;
 }
 
+.group-date-input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.group-date-input label {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--label-titles);
+    padding: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.group-date,
+.group-time,
+.group-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.group-date {
+    width: 34%;
+}
+
+.group-time {
+    width: 24%;
+}
+
+.group-duration {
+    width: 24%;
+}
+
 /* [type="checkbox"] {
     display: none;
 }
@@ -248,6 +286,7 @@ section {
 
 .form-type div {
     width: 40%;
+    margin: 0 auto;
 }
 
 .form-type input[type="radio"] {

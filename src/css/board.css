@@ -1,19 +1,4 @@
 
-/* Colors */
-:root {
-    --primary-color: #1682B0;
-    --easy-blue: #5CAACB;
-    --soft-blue: #e7f5ff;
-    --secondary-color: #FF4215;
-    --soft-orange: #FF6743;
-    --third-color: #FFBD15;
-    --soft-yellow: #FFCA43;
-    --label-titles: #707070;
-    --black: #020202;
-    --silver: #9DA2AB;
-    --just-white: #fff;
-}
-
 /* Estilos para las tablas */
 .form-table {
     display: flex;
@@ -40,9 +25,25 @@ caption {
     margin: 8px 0;
 }
 
+caption button {
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid var(--easy-blue);
+    background: transparent;
+}
+
+caption button:hover {
+    background: #e7f5ff;
+    border: 1px solid #1682B0;
+}
+
 caption i {
     color: var(--black);
     cursor: pointer;
+}
+
+caption i:hover {
+    color: #1682B0;
 }
 
 table {
@@ -78,4 +79,15 @@ tr:hover td{
 tr td i {
     color: red;
     cursor: pointer;
+}
+
+tr td button {
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid var(--easy-blue);
+    background: transparent;
+}
+
+tr td button:hover {
+    border: 1px solid red;
 }
