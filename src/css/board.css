@@ -1,4 +1,6 @@
 
+@import url(main.css);
+
 /* Estilos para las tablas */
 .form-table {
     display: flex;
@@ -48,17 +50,62 @@ caption i:hover {
 
 table {
     width: 100%;
+    max-width: 760px;
     background-color: var(--just-white);
     text-align: left;
     border-collapse: collapse;
 }
 
+table input[type="text"],
+table input[type="number"],
+table input[type="email"] {
+    padding: 6px 2px;
+    background: var(--soft-blue);
+    border: .5px solid transparent;
+    border-radius: 3px;
+    transition: .3s ease all;
+}
+
+table input[type="text"]:hover,
+table input[type="number"]:hover,
+table input[type="email"]:hover {
+    background: var(--just-white);
+    border: .5px solid var(--primary-color);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.upload-box {
+    font-size: 12px;
+    background: var(--soft-blue);
+    border-radius: 3px;
+    width: 200px;
+    outline: none;
+}
+
+::-webkit-file-upload-button {
+    color: var(--soft-blue);
+    background: var(--soft-orange);
+    padding: 8px 10px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+td select {
+    background: var(--soft-blue);
+    padding: 6px 10px;
+    border: transparent;
+    border-radius: 3px;
+    color: var(--label-titles);
+}
+
 th, td {
-    padding: 10px 25px;
+    padding: 10px 8px;
 }
 
 .form__table-candidates th, .form__table-candidates td {
-    padding: 10px 50px;
+    padding: 10px 16px;
 }
 
 thead {
@@ -69,11 +116,6 @@ thead {
 
 tr:nth-child(even) {
     background-color: #ddd;
-}
-
-tr:hover td{
-    background-color: var(--soft-blue);
-    color: var(--primary-color);
 }
 
 tr td i {

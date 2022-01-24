@@ -111,7 +111,7 @@ header .logo {
 section {
     max-width: 800px;
     width: 90%;
-    margin: auto;
+    margin: 0px auto 14px;
     padding: 20px 40px;
     background-color: var(--just-white);
     border-radius: 32px;

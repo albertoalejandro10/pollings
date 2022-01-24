@@ -7,11 +7,11 @@ const addRow = () => {
     
 
     let row_data_1 = document.createElement('td');
-    row_data_1.innerHTML = "Messi";
+    row_data_1.innerHTML = `<input type="text" name="" id="" placeholder="Nombre">`;
     let row_data_2 = document.createElement('td');
-    row_data_2.innerHTML = "Partido raro";
+    row_data_2.innerHTML = `<input type="text" name="" id="" placeholder="Partido">`;
     let row_data_3 = document.createElement('td');
-    row_data_3.innerHTML = "messi.jpg";
+    row_data_3.innerHTML = `<input class="upload-box" type="file" name="" accept="image/*">`;
     let row_data_4 = document.createElement('td');
     row_data_4.innerHTML = `<button type="button" onclick="deleteRow( ${n++} )"><i class="fas fa-trash-alt"></i></button>`;
 
