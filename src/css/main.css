@@ -85,7 +85,7 @@ header {
     align-items: center;
     max-width: 900px;
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
 }
 
 header h1 {
@@ -100,11 +100,11 @@ header h1 {
 }
 
 header .logo {
-    background-image: url(../assets/images/logo-full.png);
+    background-image: url(../assets/images/logo-full-title.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 70px;
 }
 
 /* Main */
@@ -118,16 +118,14 @@ section {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
-.hr{
-    margin: 10px 38px;
-    color: var(--soft-blue);
-}
-
 .form h4 {
     font-size: 1.2em;
     font-weight: 700;
     text-align: center;
     letter-spacing: 1.2px;
+    color: var(--label-titles);
+    padding: 10px;
+    margin-top: 6px;
 }
 
 .form-label {
@@ -167,6 +165,11 @@ section {
     line-height: 30px;
     padding: 0 40px 0 10px;
     transition: .3s ease all;
+}
+
+.form__group-input.textarea {
+    height: 65px;
+    line-height: 20px;
 }
 
 
@@ -217,8 +220,6 @@ section {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
 }
 
 .group-date-input label {
@@ -234,50 +235,16 @@ section {
 .group-time,
 .group-duration {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 
-.group-date {
-    width: 34%;
+.group-date{
+    width: 31%;
 }
 
-.group-time {
-    width: 24%;
-}
-
+.group-time,
 .group-duration {
-    width: 24%;
+    width: 30%;
 }
-
-/* [type="checkbox"] {
-    display: none;
-}
-
-.form-checkbox {
-    padding-left: 1.3em;
-    position: relative;
-}
-
-.form-checkbox:before {
-    content: '';
-    border: 1px solid var(--primary-color);
-    width: 0.8em;
-    height: 0.8em;
-    position: absolute;
-    left: 0px;
-    bottom: 5px;
-    transition: all 0.2s;
-    transform: rotate(0deg);
-}
-
-[type="checkbox"]:checked + .form-checkbox:before {
-    border-color: #119200;
-    color: #119200;
-    content: '\f00c';
-    font-family: 'FontAwesome';
-    transform: rotate(360deg);
-} */
 
 .form-type {
     width: 90%;
@@ -285,7 +252,7 @@ section {
 }
 
 .form-type div {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -298,6 +265,7 @@ section {
 .form-type label {
     display: inline-block;
     background-color: var(--soft-blue);
+    color: var(--label-titles);
     padding: 10px 20px;
     font-size: 16px;
     border: 1px solid transparent;
@@ -326,6 +294,7 @@ section {
 }
 
 .form-message {
+    color: var(--just-white);
     height: 45px;
     width: max-content;
     line-height: 45px;

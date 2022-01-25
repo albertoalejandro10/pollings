@@ -1,0 +1,103 @@
+@import url(./main.css);
+
+:root {
+    --warm-black: #080914;
+}
+
+.content p {
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: bold;
+    color: var(--label-titles);
+}
+
+.content p strong {
+    color: var(--soft-orange);
+    font-weight: 700;
+}
+
+.content .box-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.content .box-label label {
+    color: var(--label-titles);
+    font-weight: bold;
+}
+
+.box-label .form-label-poll {
+    background: var(--soft-blue);
+    border: .5px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 30px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+    margin-top: 10px;
+}
+
+.box-label .form-label-poll:focus {
+    background: var(--just-white);
+    border: .5px solid var(--primary-color);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.group__thumbs {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.group__thumbs .box img {
+    width: 94px;
+    height: 68px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--primary-color);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 12px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    background: var(--warm-black);
+    color: var(--just-white);
+    max-width: 340px;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.box:hover {
+    background: var(--black);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.box p {
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+.box .candidate {
+    color: var(--soft-orange);
+}
+
+.box p span {
+    color: var(--just-white);
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}
+
+.btn.poll {
+    margin-top: 10px;
+    padding: 10px 40px;
+}

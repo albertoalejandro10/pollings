@@ -15,13 +15,10 @@ const addRowCensus = () => {
     row_2_data_3.innerHTML = `<input type="email" name="" id="" placeholder="Email">`;
 
     let row_2_data_4 = document.createElement('td');
-    row_2_data_4.innerHTML = `<select name="select" id="">
-                                <option value="Wallet">Wallet</option>
-                                <option value="Token">Token</option>
-                              </select>`;
+    row_2_data_4.innerHTML = `<input type="text" name="" id="" placeholder="Token">`;
     
     let row_2_data_5 = document.createElement('td');
-    row_2_data_5.innerHTML = `<button type="button" onclick="deleteRowCensus( ${m++} )"><i class="fas fa-trash-alt"></i></button>`;
+    row_2_data_5.innerHTML = `<button type="button" class="trash-alt" onclick="deleteRowCensus( ${m++} )"><i class="fas fa-trash-alt"></i></button>`;
 
     row_2.appendChild(row_2_data_1);
     row_2.appendChild(row_2_data_2);

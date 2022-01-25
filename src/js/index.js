@@ -76,4 +76,20 @@ info_inputs.forEach( input => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+
+    if ( fields.title && fields.description ) {
+        form.reset()
+
+        document.getElementById('form__message-success').classList.add('form__message-success-active')
+        
+        setTimeout( () => {
+            document.getElementById('form__message-success').classList.remove('form__message-success-active')
+        }, 5000)
+
+        Array.from(document.getElementsByClassName("form__group-correct")).forEach(function(icon) {
+            icon.classList.remove('form__group-correct')
+         });
+    } else {
+        document.getElementById('form-message').classList.add('form-message-active')
+    }
 })

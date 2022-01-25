@@ -1,0 +1,14 @@
+@import url(./main.css);
+
+.total__votes {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: var(--soft-orange);
+    color: var(--just-white) !important;
+    border: none;
+    padding: 0.8em;
+    max-width: max-content;
+    margin-top: 10px;
+    padding: 10px 40px;
+}

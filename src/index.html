@@ -26,7 +26,7 @@
                         <!-- Grupo: Titulo -->
                         <div class="form-group" id="group-title">
                             <label for="title" class="form-label">Título</label>
-                            <input type="text" class="form__group-input" name="title" id="title" placeholder="ej. Elecciones legislativas" autocomplete="off" required>
+                            <input type="text" class="form__group-input" name="title" id="title" placeholder="ej. Elecciones legislativas" autocomplete="off">
                             <i class="form__validation-state fas fa-times-circle"></i>
                             <p class="form__input-error">El título tiene que ser de 4 a 32 dígitos y solo puede contener letras, números o guión</p>
                         </div>
@@ -34,7 +34,7 @@
                         <!-- Grupo: Descripcion -->
                         <div class="form-group" id="group-description">
                             <label for="description" class="form-label">Descripción</label>
-                            <textarea class="form__group-input description" name="description" id="description" placeholder="ej. Las elecciones legislativas de Argentina de 2021" required></textarea>
+                            <textarea class="form__group-input textarea" name="description" id="description" placeholder="ej. Las elecciones legislativas de Argentina de 2021"></textarea>
                             <i class="form__validation-state fas fa-times-circle"></i>
                             <p class="form__input-error">La descripción solo puede contener letras y números</p>
                         </div>
@@ -46,15 +46,15 @@
                         <div class="group-date-input">
                             <div class="group-date">
                                 <label for="start-date">Fecha</label>
-                                <input class="form__group-input date" type="date" id="start-date" name="start-date" required>
+                                <input class="form__group-input date" type="date" id="start-date" name="start-date">
                             </div>
                             <div class="group-time">
-                                <label for="start-time">Time</label>
-                                <input class="form__group-input date" type="time" id="start-time" name="start-time" required>
+                                <label for="start-time">Inicio</label>
+                                <input class="form__group-input date" type="time" id="start-time" name="start-time">
                             </div>
                             <div class="group-duration">
-                                <label for="time-duration">Duration</label>
-                                <input class="form__group-input date" type="time" id="time-duration" name="time-duration" required>
+                                <label for="time-duration">Duración</label>
+                                <input class="form__group-input date" type="time" id="time-duration" name="time-duration">
                             </div>
                         </div>
                     </div>
@@ -63,57 +63,59 @@
                         <p class="form-label">Tipo de votación</p><br>
                         <div>
                             <input type="radio" id="type-token" name="type" value="type-token" checked>
-                            <label for="type-token">Token</label>
+                            <label for="type-token">por Token</label>
     
                             <input type="radio" id="type-wallet" name="type" value="type-wallet">
-                            <label for="type-wallet">Wallet</label>
+                            <label for="type-wallet">por Wallet</label>
                         </div>
                     </div>
-
-                    <hr class="hr">
 
                     <div class="form-table">
                         <div class="form__table-candidates">
                             <table id="candidates">
-                                <caption>Candidatos <button type="button" onclick="addRow()"><i class="fas fa-plus-circle"></i></button></caption>
+                                <caption>Candidatos</caption>
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
                                         <th>Descripción</th>
-                                        <th>Foto</th>
-                                        <th>&nbsp</th>
+                                        <th>Imagen</th>
+                                        <th><button type="button" onclick="addRow()"><i class="fas fa-plus"></i></button></th>
                                     </tr>
                                 </thead>
                                 <tbody id="tbody">
                                     <tr id="row-0">
                                         <td><input type="text" name="" id="" placeholder="Nombre"></td>
                                         <td><input type="text" name="" id="" placeholder="Partido"></td>
-                                        <td>
-                                            <input class="upload-box" type="file" name="" accept="image/*">
+                                        <td class="upload-button">
+                                            <input type="file" id="real-file-0" hidden="hidden" accept="image/*" />
+                                            <button type="button" class="custom-button" id="custom-button-0" onclick="upFile(0)"><i class="far fa-file-image"></i>Seleccionar imagen</button>
+                                            <span class="custom-text" id="custom-text-0">No hay imagen</span>
                                         </td>
-                                        <td><button type="button" onclick="deleteRow(0)"><i class="fas fa-trash-alt"></i></button></td>
+                                        <td><button type="button" class="trash-alt" onclick="deleteRow(0)"><i class="fas fa-trash-alt"></i></button></td>
                                     </tr>
                                     <tr id="row-1">
                                         <td><input type="text" name="" id="" placeholder="Nombre"></td>
                                         <td><input type="text" name="" id="" placeholder="Partido"></td>
-                                        <td>
-                                            <input class="upload-box" type="file" name="" accept="image/*">
+                                        <td class="upload-button">
+                                            <input type="file" id="real-file-1" hidden="hidden" accept="image/*" />
+                                            <button type="button" class="custom-button" id="custom-button-1" onclick="upFile(1)"><i class="far fa-file-image"></i>Seleccionar imagen</button>
+                                            <span class="custom-text" id="custom-text-1">No hay imagen</span>
                                         </td>
-                                        <td><button type="button" onclick="deleteRow(1)"><i class="fas fa-trash-alt"></i></button></td>
+                                        <td><button type="button" class="trash-alt" onclick="deleteRow(1)"><i class="fas fa-trash-alt"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="form__table-census">
                             <table id="census">
-                                <caption>Padrón <button type="button" onclick="addRowCensus()"><i class="fas fa-plus-circle"></i></span></caption>
+                                <caption>Padrón </caption>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Nombre</th>
                                         <th>Email</th>
-                                        <th>Billetera</th>
-                                        <th>&nbsp</th>
+                                        <th>Billetera/Token</th>
+                                        <th><button type="button" onclick="addRowCensus()"><i class="fas fa-plus"></i></button></th>
                                     </tr>
                                 </thead>
                                 <tbody id="tbody-census">
@@ -121,25 +123,15 @@
                                         <td><input type="number" name="" id="" placeholder="Número"></td>
                                         <td><input type="text" name="" id="" placeholder="Nombre"></td>
                                         <td><input type="email" name="" id="" placeholder="Email" autocomplete="email"></td>
-                                        <td>
-                                            <select name="select" id="">
-                                                <option value="Wallet">Wallet</option>
-                                                <option value="Token">Token</option>
-                                            </select>
-                                        </td>
-                                        <td><button type="button" onclick="deleteRowCensus(0)"><i class="fas fa-trash-alt"></i></button></i></td>
+                                        <td><input type="text" name="" id="" placeholder="Token"></td>
+                                        <td><button type="button" class="trash-alt" onclick="deleteRowCensus(0)"><i class="fas fa-trash-alt"></i></button></i></td>
                                     </tr>
                                     <tr id="row-1-census">
                                         <td><input type="number" name="" id="" placeholder="Número"></td>
                                         <td><input type="text" name="" id="" placeholder="Nombre"></td>
                                         <td><input type="email" name="" id="" placeholder="Email" autocomplete="email"></td>
-                                        <td>
-                                            <select name="select" id="">
-                                                <option value="Wallet">Wallet</option>
-                                                <option value="Token">Token</option>
-                                            </select>
-                                        </td>
-                                        <td><button type="button" onclick="deleteRowCensus(1)"><i class="fas fa-trash-alt"></i></button></td>
+                                        <td><input type="text" name="" id="" placeholder="Token"></td>
+                                        <td><button type="button" class="trash-alt" onclick="deleteRowCensus(1)"><i class="fas fa-trash-alt"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>

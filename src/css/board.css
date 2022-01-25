@@ -7,6 +7,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    margin-top: 16px;
 }
 
 .form-table span i {
@@ -21,30 +22,31 @@
 
 caption {
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
+    color: var(--label-titles);
     padding: 10px;
-    margin: 8px 0;
+    letter-spacing: 1px;
+    margin-top: 6px;
 }
 
-caption button {
+th button {
+    color: var(--black);
     padding: 3px;
-    border-radius: 2px;
-    border: 1px solid var(--easy-blue);
-    background: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--just-white);
+    background: var(--soft-blue);
 }
 
-caption button:hover {
+th button:hover {
     background: #e7f5ff;
     border: 1px solid #1682B0;
 }
 
-caption i {
+th i {
     color: var(--black);
     cursor: pointer;
 }
 
-caption i:hover {
+th i:hover {
     color: #1682B0;
 }
 
@@ -75,37 +77,41 @@ table input[type="email"]:hover {
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
-.upload-box {
-    font-size: 12px;
-    background: var(--soft-blue);
-    border-radius: 3px;
-    width: 200px;
-    outline: none;
+table input[type="number"] {
+    width: 78px;
 }
 
-::-webkit-file-upload-button {
-    color: var(--soft-blue);
+.custom-button {
+    color: var(--just-white);
     background: var(--soft-orange);
     padding: 8px 10px;
     border: none;
     border-radius: 3px;
     outline: none;
+    cursor: pointer;
 }
 
-td select {
+tr td .custom-button i {
+    color: var(--primary-color);
+    margin-right: 2px;
+}
+
+.custom-text {
+    padding: 10px 2px;
     background: var(--soft-blue);
-    padding: 6px 10px;
-    border: transparent;
+    border: .5px solid transparent;
+    font-size: 12px;
     border-radius: 3px;
+    font-size: 10px;
     color: var(--label-titles);
 }
 
 th, td {
-    padding: 10px 8px;
+    padding: 2px 8px;
 }
 
 .form__table-candidates th, .form__table-candidates td {
-    padding: 10px 16px;
+    padding: 3px 14px;
 }
 
 thead {
@@ -118,18 +124,18 @@ tr:nth-child(even) {
     background-color: #ddd;
 }
 
-tr td i {
+tr td .trash-alt i {
     color: red;
     cursor: pointer;
 }
 
-tr td button {
+tr td .trash-alt {
     padding: 3px;
     border-radius: 2px;
     border: 1px solid var(--easy-blue);
     background: transparent;
 }
 
-tr td button:hover {
+tr td .trash-alt:hover {
     border: 1px solid red;
 }
