@@ -28,6 +28,10 @@ caption {
     margin-top: 6px;
 }
 
+table caption {
+    text-align: left;
+}
+
 th button {
     color: var(--black);
     padding: 3px;
