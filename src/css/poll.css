@@ -1,9 +1,5 @@
 @import url(./main.css);
 
-:root {
-    --warm-black: #080914;
-}
-
 .content p {
     text-align: center;
     margin: 10px 0px;
@@ -33,6 +29,7 @@
 }
 
 .content .box-time {
+    text-align: left;
     margin: 0 auto;
     background: var(--soft-blue);
     border-radius: 5px;
@@ -83,8 +80,8 @@
     width: 94px;
     height: 68px;
     display: block;
-    margin: 0 auto;
-    border: 1px solid var(--primary-color);
+    margin: 10px auto;
+    border: 1px solid var(--label-titles);
 }
 
 .box {
@@ -116,7 +113,7 @@
 }
 
 .box p span {
-    color: var(--just-white);
+    color: var(--label-titles);
     font-weight: 300;
     letter-spacing: 0.4px;
 }

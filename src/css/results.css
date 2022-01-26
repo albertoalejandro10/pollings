@@ -1,5 +1,12 @@
 @import url(./main.css);
 
+.container h5 {
+    color: var(--label-titles);
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 15px;
+}
+
 .total__votes {
     text-align: center;
     font-size: 16px;
@@ -11,4 +18,50 @@
     max-width: max-content;
     margin-top: 10px;
     padding: 10px 40px;
+}
+
+.box {
+    text-align: center;
+}
+
+.btn__votes{
+    padding: 8px 24px;
+    border-radius: 3px;
+    color: var(--secondary-color);
+}
+
+.winner__thumb {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.winner__thumb .box.box__winner {
+    padding: 0px -1px;
+    width: 40%;
+}
+
+.winner__thumb .box img {
+    width: 94px;
+    height: 68px;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid var(--secondary-color);
+}
+
+.winner__thumb .box h6 {
+    color: var(--soft-orange);
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.winner__thumb .btn__votes.btn__winner {
+    background: var(--soft-orange);
+    color: var(--warm-black);
+}
+
+.winner__thumb .btn__votes.btn__winner:hover {
+    background: var(--just-white)
 }

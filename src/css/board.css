@@ -86,8 +86,8 @@ table input[type="number"] {
 }
 
 .custom-button {
-    color: var(--just-white);
-    background: var(--soft-orange);
+    color: var(--label-titles);
+    background: var(--warm-black);
     padding: 8px 10px;
     border: none;
     border-radius: 3px;
@@ -96,8 +96,8 @@ table input[type="number"] {
 }
 
 tr td .custom-button i {
-    color: var(--primary-color);
-    margin-right: 2px;
+    color: var(--secondary-color);
+    margin-right: 4px;
 }
 
 .custom-text {

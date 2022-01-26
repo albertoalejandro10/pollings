@@ -21,44 +21,34 @@
             <div class="form">
                 <h4>Votación interna</h4>
                 <hr style="border: .3px solid #5CAACB; margin: 10px 0">
-                <div class="content">
-                    <p>Detalles de la votación interna</p>
-                    <p>Horario de votacion: <strong>15/01/2022 08:00 - 15/01/2022 18:00</strong></p>
+                <div class="container">
+                    <div class="content">
+                        <p id="title"></p>
+                        <p id="description"></p>
+                        <p>Horario de votacion: </p>
+                        <p class="box-time">
+                           Fecha:<span id="start-date"></span> <br>
+                           Inicio: <span id="start-time"></span> <br>
+                           Duración: <span id="duration"></span> <br>
+                        </p>
+                    </div>
 
-                    <div class="group__thumbs">
-                        <div class="box">
-                            <p class="candidate">Candidato 1<br>
-                            <span>Detalle</span></p>
-                            <img class="thumb" src="./assets/images/letra-x.png" alt="candidate-photo">
-                            <p class="total__votes">7 votos</p>
-                        </div>
+                    <div class="box-label">
+                        <input class="total-boxes" type="number" name="total-boxes" id="total-boxes" placeholder="Escribe un numero">
+                        <button id="test" style="padding: 6px 10px" type="button" onclick="getValueInput()">Click</button>
+                    </div>
+                    <h5>Resultados de la votación</h5>
 
-                        <div class="box">
-                            <p class="candidate">Candidato 2<br>
-                            <span>Detalle</span></p>
-                            <img class="thumb" src="./assets/images/letra-x.png" alt="candidate-photo">
-                            <p class="total__votes">3 votos</p>
-                        </div>
-
-                        <div class="box">
-                            <p class="candidate">Candidato 3<br>
-                            <span>Detalle</span></p>
-                            <img class="thumb" src="./assets/images/letra-x.png" alt="candidate-photo">
-                            <p class="total__votes">1 voto</p>
-                        </div>
-
-                        <div class="box">
-                            <p class="candidate">Candidato 4<br>
-                            <span>Detalle</span></p>
-                            <img class="thumb" src="./assets/images/letra-x.png" alt="candidate-photo">
-                            <p class="total__votes">5 votos</p>
-                        </div>
+                    <div class="winner__thumb" id="winner__thumb">
+                        
+                    </div>
+                    <div class="group__thumbs" id="group__thumbs">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="./js/poll.js"></script>
+    <script src="./js/results.js"></script>
     <script src="https://kit.fontawesome.com/9ff09add6c.js" crossorigin="anonymous"></script>  
 </body>
 </html>
