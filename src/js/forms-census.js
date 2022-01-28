@@ -1,3 +1,4 @@
+// Funcion para agregar una nueva fila a la tabla
 let m = 2;
 const addRowCensus = () => {
     let tbody_2 = document.getElementById('tbody-census');
@@ -28,6 +29,7 @@ const addRowCensus = () => {
     tbody_2.appendChild(row_2);
 }
 
+// Funcion para eliminar una fila de la tabla
 const deleteRowCensus = (index) => {
     let table = document.getElementById("census");
     let rowCount = table.rows.length;

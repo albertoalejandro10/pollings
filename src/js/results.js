@@ -13,6 +13,7 @@ const candidates = {
     image: 'letra-x.png'
 }
 
+// Insertar datos para la votacion interna
 const title = document.getElementById('title').textContent = valuesInputs.title
 const description = document.getElementById('description').textContent = valuesInputs.description
 const startDate = document.getElementById('start-date').textContent = valuesInputs.startDate

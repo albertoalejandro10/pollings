@@ -1,3 +1,4 @@
+// Funcion para agregar una nueva fila
 let n = 2;
 const addRow = () => {
     let tbody = document.getElementById('tbody');
@@ -26,6 +27,7 @@ const addRow = () => {
     tbody.appendChild(row);
 }
 
+// Funcion para eliminar una fila
 const deleteRow = (index) => {
     let table = document.getElementById("candidates");
     let rowCount = table.rows.length;
@@ -37,7 +39,7 @@ const deleteRow = (index) => {
 }
 
 
-// Input File code
+// Codigo para el boton «Seleccionar Imagen».
 const upFile = (index) => {
     const customBtn = document.getElementById(`custom-button-${index}`);
     customBtn.addEventListener("click", index => {

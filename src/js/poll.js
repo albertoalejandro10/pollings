@@ -13,13 +13,14 @@ const candidates = {
     image: 'letra-x.png'
 }
 
+// Insertar datos de votacion interna
 const title = document.getElementById('title').textContent = valuesInputs.title
 const description = document.getElementById('description').textContent = valuesInputs.description
 const startDate = document.getElementById('start-date').textContent = valuesInputs.startDate
 const startTime = document.getElementById('start-time').textContent = valuesInputs.startTime
 const duration = document.getElementById('duration').textContent = valuesInputs.duration
 
-
+// Funcion para deshabilitar los botones
 const pollVote = () => {
     const votes = document.querySelectorAll('.btn.poll');
     votes.forEach( (button, index) => {

@@ -41,24 +41,26 @@
 
                     </div>
 
+                    <!-- Grupo: Fechas (Inicio, tiempo y duracion) -->
                     <div class="form-date">
                         <label class="form-label">Duración de la votación</label>
                         <div class="group-date-input">
-                            <div class="group-date">
+                            <div class="group-date" id="group__startDate">
                                 <label for="start-date">Fecha</label>
                                 <input class="form__group-input date date__input" type="date" id="start-date" name="start-date">
                             </div>
-                            <div class="group-time">
+                            <div class="group-time" id="group__startTime">
                                 <label for="start-time">Inicio</label>
                                 <input class="form__group-input date date__input" type="time" id="start-time" name="start-time">
                             </div>
-                            <div class="group-duration">
+                            <div class="group-duration" id="group__timeDuration">
                                 <label for="time-duration">Duración</label>
                                 <input class="form__group-input date date__input" type="time" id="time-duration" name="time-duration">
                             </div>
                         </div>
                     </div>
 
+                    <!-- Grupo: Tipo Wallet -->
                     <div class="form-type">
                         <p class="form-label">Tipo de votación</p><br>
                         <div>
@@ -70,6 +72,7 @@
                         </div>
                     </div>
 
+                    <!-- Tabla: Candidatos -->
                     <div class="form-table">
                         <div class="form__table-candidates">
                             <table id="candidates">
@@ -106,6 +109,8 @@
                                 </tbody>
                             </table>
                         </div>
+
+                        <!-- Tabla: Padron -->
                         <div class="form__table-census">
                             <table id="census">
                                 <caption>Padrón </caption>
@@ -137,11 +142,13 @@
                             </table>
                         </div>
                     </div>
+                    <!-- Mensaje de error y mensaje de confirmacion -->
                     <div class="center-content">
                         <div class="form-message" id="form-message">
                             <p><i class="fas fa-exclamation-circle"></i> <b> Error: </b> Por favor rellene el formulario correctamente</p>
                         </div>
 
+                    
                         <div class="form-button form__button-btn-send">
                             <button type="submit" class="btn"><span>Crear elección</span></button>
                             <p class="form__message-success" id="form__message-success">Información enviada exitosamente</p>
